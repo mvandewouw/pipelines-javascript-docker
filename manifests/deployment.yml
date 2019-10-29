@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: mvandewouwpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mvandewouwpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: mvandewouwpipelinesjavascriptdocker 
+          image: micheltf1acr.azurecr.io/mvandewouwpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
